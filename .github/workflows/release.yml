@@ -1,0 +1,52 @@
+name: Release
+
+# Push a tag such as v0.5.0 (matching the plugin version) to publish a release with the plugin
+# ZIP attached. WordPress sites running Local TTS pick it up as an update.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: curl, json
+          coverage: none
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Tests
+        run: bash tests/run.sh
+      - name: Build
+        run: python3 tools/build.py --tag "${GITHUB_REF_NAME}"
+      - name: Release notes from readme.txt
+        run: |
+          python3 - <<'PY'
+          import os, re
+          version = os.environ["GITHUB_REF_NAME"].lstrip("vV")
+          readme = open("local-tts/readme.txt", encoding="utf-8").read()
+          m = re.search(r"^= " + re.escape(version) + r" =\s*$(.*?)(?=^= |\Z)", readme, re.M | re.S)
+          meta = "\n".join(re.findall(r"^(?:Requires at least|Requires PHP|Tested up to):.*$", readme, re.M))
+          notes = (m.group(1).strip() if m else "See readme.txt.") + "\n\n" + meta + "\n"
+          open("release-notes.md", "w", encoding="utf-8").write(notes)
+          PY
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" dist/local-tts-*.zip --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" dist/local-tts-*.zip \
+              --title "Local TTS ${GITHUB_REF_NAME#v}" --notes-file release-notes.md
+          fi

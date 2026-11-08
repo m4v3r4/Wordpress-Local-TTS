@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local TTS: development page</title>
+<link rel="stylesheet" href="../local-tts/assets/css/player.css">
+<style>
+  body { font: 18px/1.6 Georgia, serif; max-width: 42em; margin: 2em auto; padding: 0 16px; color: #222; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #ddd; background: #161616; } }
+  .note { font: 14px/1.4 system-ui, sans-serif; padding: .6em .8em; background: #8882; border-radius: 6px; }
+</style>
+</head>
+<body>
+<p class="note">
+  Local test: run <code>python -m http.server 8080</code> in the repository root and open
+  <code>http://localhost:8080/dev/</code>. A mock voice (sine tone) is used by default.
+  For the real engine, pass the addresses of files installed by WordPress:
+  <code>?real=1&amp;manifest=…/manifest.json&amp;ort=…/onnxruntime-web/1.30.0/</code>
+</p>
+<article>
+  <h1 class="entry-title">Toplumsal Hafıza ve 21. Yüzyılda Kent</h1>
+  <div class="entry-content">
+    <div class="ltts-player" data-ltts-player data-ltts-skip role="group" aria-label="Yazıyı dinle">
+      <div class="ltts-row">
+        <button type="button" class="ltts-btn ltts-main" data-ltts-action="toggle" aria-pressed="false"><span class="ltts-icon" aria-hidden="true"></span><span class="ltts-label">Yazıyı dinle</span></button>
+        <button type="button" class="ltts-btn ltts-stop" data-ltts-action="stop" hidden>Durdur</button>
+        <button type="button" class="ltts-btn ltts-retry" data-ltts-action="retry" hidden>Yeniden dene</button>
+        <span class="ltts-status" role="status" aria-live="polite"></span>
+        <span class="ltts-hint" hidden></span>
+      </div>
+      <div class="ltts-progress" hidden><div class="ltts-bar"></div></div>
+    </div>
+    <span data-ltts-content-start hidden></span>
+    <p>Maurice Halbwachs, toplumsal hafızanın bireysel değil kolektif bir süreç olduğunu savunur. Türkiye'de 1980'lerde başlayan kentsel dönüşüm, bu hafızanın mekânla ilişkisini yeniden kurdu.</p>
+    <h2>Mekân ve hatırlama</h2>
+    <p>Kent, yalnız binalardan oluşmaz. Dr. Ayşe Demir'e göre mahalle, ortak hikâyelerin taşıyıcısıdır; 2023'teki saha çalışmasında görüşülen 45 kişinin %60'ı eski mahallesini "ev" olarak tanımladı.</p>
+    <blockquote><p>Hafıza, şimdinin ihtiyaçlarına göre geçmişi yeniden kurar.</p></blockquote>
+    <ul>
+      <li>Mekânsal süreklilik</li>
+      <li>Ortak ritüeller ve bayramlar</li>
+    </ul>
+    <pre class="wp-block-code"><code>print("bu satır okunmamalı")</code></pre>
+    <p hidden>Bu gizli paragraf okunmamalı.</p>
+    <p class="ltts-skip">Bu paragraf ltts-skip sınıfıyla atlanır.</p>
+    <h2>Hafızanın mekânsal çerçeveleri</h2>
+    <p>Halbwachs'a göre hatırlamak, bir grubun mekâna bıraktığı izlerle mümkündür. Sokak adları, meydanlar ve kahvehaneler bu izlerin taşıyıcısıdır; bir mahalle yıkıldığında yalnız binalar değil, o binalara bağlı ortak anlatılar da dağılır.</p>
+    <p>Kentsel dönüşüm projeleri bu nedenle yalnız mimari bir müdahale değildir. Eski sakinlerin yeni konutlara dağıtılması, grubun hafızasını taşıyan ağları da çözer. Saha görüşmelerinde katılımcıların sıkça "artık kimse kimseyi tanımıyor" demesi bu çözülmenin gündelik ifadesidir.</p>
+    <p>Öte yandan hafıza yalnız kaybolmaz; yeniden kurulur. Yeni mahallelerde kurulan dernekler, eski mahallenin adını taşıyan WhatsApp grupları ve yıllık buluşmalar, dağılmış bir topluluğun hatırlama pratiklerini sürdürme çabalarıdır.</p>
+    <h2>Sonuç yerine</h2>
+    <p>Sonuç olarak, II. Mahmut döneminden bu yana süren modernleşme, kentin belleğini hem siler hem de yeniden yazar.</p>
+    <span data-ltts-content-end hidden></span>
+    <div class="sharedaddy"><p>Paylaş: bu paylaşım kutusu okunmamalı.</p></div>
+  </div>
+</article>
+<script>
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var base = "../local-tts/";
+    var ort = q.get("ort") || "/dev/fake-ort/";
+    var mock = !q.get("real");
+    window.lttsPlayerConfig = {
+      postId: 1, lang: q.get("lang") || "tr", supportedLangs: (q.get("langs") || "tr,en,de,fr,es").split(","),
+      title: "Toplumsal Hafıza ve 21. Yüzyılda Kent",
+      workerUrl: mock ? "mock-worker.js?" + q.toString() : base + "assets/js/tts-worker.js?ver=dev",
+      manifestUrl: new URL(q.get("manifest") || "/dev/manifest.json", location.href).href,
+      ortModuleUrl: new URL(ort + "ort.wasm.min.mjs", location.href).href,
+      ortWasmBase: new URL(ort, location.href).href,
+      modelId: "ema-lightning-tr", modelVersion: "1.0.0", downloadBytes: 36171095 + 12000000,
+      excludeSelectors: "pre,.wp-block-code,script,style,noscript,template,svg,math,iframe,button,form,nav,figure.wp-block-embed,sup.fn,.wp-block-footnotes,.screen-reader-text,.sharedaddy,.jp-relatedposts,[data-ltts-skip],.ltts-skip,.ltts-player",
+      credit: "EMA Lightning (Apache-2.0)", creditUrl: "https://huggingface.co/canberkkkkkk/ema-lightning",
+      contentSelector: "", speed: 1, prefetch: 1, maxSegmentChars: 280, minSegmentChars: 24, highlight: true
+    };
+  })();
+</script>
+<script src="../local-tts/assets/js/player.js" defer></script>
+</body>
+</html>

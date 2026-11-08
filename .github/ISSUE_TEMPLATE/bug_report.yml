@@ -1,0 +1,35 @@
+name: Bug report
+description: Something does not work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      description: Local TTS, WordPress and PHP versions
+      placeholder: Local TTS 0.5.0, WordPress 6.8, PHP 8.2
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device (for player problems)
+      placeholder: Safari 18 on iPhone 15
+  - type: input
+    id: voice
+    attributes:
+      label: Voice
+      placeholder: EMA Lightning (Turkish) / Piper en_GB-alan-medium / …
+  - type: textarea
+    id: status
+    attributes:
+      label: Local TTS → Status
+      description: Paste the results of "Check the server" and any browser console errors.
+      render: text

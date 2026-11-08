@@ -1,0 +1,117 @@
+WordPress yazıları için
+cihazda seslendirme
+
+Teknik tasarım ve geliştirme yol haritası
+
+Asosyoloji’deki yazılara “Yazıyı dinle” düğmesi ekleyelim. Okur düğmeye bastığında tarayıcı model dosyalarını indirir, yazının sesini cihazda üretir ve ilk parça hazır olur olmaz oynatır. WordPress yazıyı, oynatıcıyı ve statik model dosyalarını sunar. Sentez için yazı metni bir servise gönderilmez.
+
+Dil ve model seçimi
+
+Yazı dili
+
+Motor ve ses
+
+Sürüm kapsamı
+
+Türkçe
+
+EMA Lightning ONNX. Model dosyaları yaklaşık 35 MB. Türkçe normalleştirici ve çalışma zamanı ayrıca yüklenir.
+
+İlk pilot ve ilk sürüm.
+
+İngilizce
+
+Kokoro-82M ONNX ve am_onyx sesi. Tarayıcı bağlantısı için kokoro-js.
+
+Türkçe pilot sonrasında ayrı model paketi.
+
+Bu belgede “Onyx”, Kokoro’nun Amerikan İngilizcesi için sunduğu am_onyx sesini ifade eder. 0N-Labs Onyx-TTS ayrı bir paket. O paket için Türkçe ses ve tarayıcı uyumluluğu doğrulanmayı bekliyor.
+
+İlk sürümde okur ne görür
+
+Oynatıcı tekil yazının başında görünür. İlk kullanımda tahmini indirme boyutu ve ilerleme gösterilir. Okur oynatabilir, duraklatabilir, kaldığı yerden sürdürebilir veya durdurabilir. Model ya da cihaz kaynaklı bir hata oluşursa oynatıcı Türkçe durum mesajı ve yeniden deneme seçeneği gösterir.
+
+Pilot kapsamı açık erişimli Türkçe yazılar ve ön planda oynatmadır. Kalıcı dinleme konumu, ses dosyası indirme ve kilit ekranında oynatma sonraki sürümlerde ayrı değerlendirilir.
+
+
+TEKNİK TASLAK  /  
+
+ASOSYOLOJİ  /  WORDPRESS
+
+02  WordPress ve tarayıcı mimarisi
+
+WordPress entegrasyonu
+
+Eklenti, wp_enqueue_scripts üzerinden küçük oynatıcı kodunu ve stilleri tekil yazılarda yükler. the_content filtresi is_singular('post'), in_the_loop() ve is_main_query() kontrolleriyle ana yazının başına oynatıcı ekler. Şifre korumalı yazıları atlar ve aynı yazıda yinelenen oynatıcıyı önler. Klasik tema ile blok temada yerleşimi ayrı doğrularız.
+
+Başlık ve eklentinin işaretlediği yazı gövdesi tarayıcıda okunur. DOM’dan başlık, paragraf, alıntı ve liste öğeleri belge sırasıyla alınır. Oynatıcı, gizli öğeler, kod blokları ve eklenti tarafından açıkça hariç tutulan alanlar atlanır. Tema ve blokların ürettiği ek içerik pilot örneklerinde kontrol edilir.
+
+Pilot dili tr olarak sabitlenebilir. İngilizce eklendiğinde yazı dili için sıralama yazıya özel ayar, varsa çok dilli eklentinin yazı dili ve site varsayılanı olur. Tanınmayan dilde oynatıcı durum mesajı gösterir. WordPress’in ön yüzüne konan yapılandırma ve başlık uygun HTML bağlamında kaçışlanır.
+
+Bileşenlerin görevleri
+
+Bileşen
+
+Girdi ve çıktı
+
+WordPress ve PHP
+
+Yazı kimliği, dil, içerik alanı ve sürümlü model manifestinin adresini oynatıcıya verir.
+
+Oynatıcı ve metin çıkarıcı
+
+Yazıyı sıralı parçalara böler. Kullanıcı komutlarını ve durum mesajlarını yönetir.
+
+Web Worker ve motor
+
+Model oturumunu açar, metni modele hazırlar ve her parça için PCM örnekleriyle örnekleme hızını döndürür.
+
+Web Audio
+
+PCM parçalarını sırayla zamanlar. Duraklatma, sürdürme ve oynatma konumunu yönetir.
+
+Dağıtım biçimi
+
+İlk dağıtımda kurulabilir eklenti ZIP’i ve aynı HTTPS alan adında sürümlü model dosyaları kullanılır. Manifest model sürümü, dosya yolları, byte boyutları ve SHA-256 değerlerini taşır. JavaScript, Worker, ONNX Runtime ve WASM sürümleri birlikte sabitlenir. Staging ortamında sunucunun .wasm MIME türünü, içerik güvenliği politikasını ve önbellek başlıklarını kontrol ederiz.
+
+
+TEKNİK TASLAK  /  
+
+ASOSYOLOJİ  /  WORDPRESS
+
+03  Ses üretimi ve hata yönetimi
+
+İlk tıklamadan ilk sese
+
+Dinle tıklaması sırasında AudioContext oluşturulur veya sürdürülür. Ardından oynatıcı bir Worker açar ve model dosyalarını önbellekten okur ya da indirir. Aktif bir oynatma oturumunda aynı model oturumu bütün parçalar için kullanılır. İlk parça çalarken tek bir sonraki parça hazırlanır.
+
+Türkçe metin önce cümle sınırlarına göre bölünür. Gerektiğinde çok uzun cümleler sözcük sınırından parçalanır. EMA normalleştiricisi sayıları ve saatleri işler. Parça sınırı ve azami girdi uzunluğu, seçilen modelle ölçümde ayarlanır. WordPress HTML’si modele düz metin olarak girer.
+
+İstek ve yanıtlar sessionId ile segmentIndex taşır. Worker, PCM tamponunu aktarılabilir ArrayBuffer olarak döndürür. Durdur komutu kuyruk ve zamanlanmış sesi temizler. Çalışan çıkarım hemen durdurulamıyorsa Worker sonlandırılır. Eski oturumdan gelen yanıtlar yok sayılır.
+
+Başlangıç motoru tek iş parçacıklı WASM’dır. Böylece pilot, site genelinde cross-origin isolation başlıkları gerektirmeden denenebilir. WebGPU hızlandırması ancak model ve hedef cihazlarda ölçümle kazanım gösterirse eklenir. Etkinleştirilirse GPU başlatma hatasında WASM ile bir kez yeniden denenir.
+
+Önbellek ve kullanıcıya yansıyan hatalar
+
+Durum
+
+Beklenen davranış
+
+İlk indirme yarıda kalır
+
+Yeniden deneme sun. Yalnız boyut ve bütünlük kontrolünü geçen dosyaları yeniden kullan.
+
+Depolama kotası dolu
+
+Bellek yeterliyse o oturumda oynat. Sonraki oturumda yeniden indirme gerekebilir.
+
+Model veya runtime uyumsuz
+
+Anlaşılır hata göster ve oynatıcıyı tekrar kullanılabilir duruma getir.
+
+Sonraki parça yetişmez
+
+“Ses hazırlanıyor” durumuna geç. Parça hazır olduğunda aynı konumdan sürdür.
+
+Model dosyaları sürüm anahtarıyla Cache Storage’da tutulur. Ses parçaları ilk sürümde oturum belleğinde sınırlı tutulur. Tarayıcı model önbelleğini silebilir. İlk model indirmesi ağ gerektirir ve WordPress sayfasının çevrimdışı açılması ayrı bir özelliktir.
+

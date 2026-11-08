@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.mo binary
+*.png binary
+*.zip binary
+
+# Not part of the GitHub source archive's plugin folder
+/.github export-ignore
+/tests export-ignore
+/dev export-ignore

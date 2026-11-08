@@ -1,0 +1,867 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Local TTS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-08\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: tr_TR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: local-tts\n"
+
+#: includes/class-ltts-admin.php:73
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: includes/class-ltts-admin.php:88
+msgid "Display"
+msgstr "Görünüm"
+
+#: includes/class-ltts-admin.php:89
+msgid "Voices"
+msgstr "Ses modelleri"
+
+#: includes/class-ltts-admin.php:90
+msgid "Reading"
+msgstr "Okuma"
+
+#: includes/class-ltts-admin.php:91 includes/class-ltts-admin.php:362
+msgid "Status"
+msgstr "Durum"
+
+#: includes/class-ltts-admin.php:112
+msgid "Downloading…"
+msgstr "İndiriliyor…"
+
+#: includes/class-ltts-admin.php:114
+msgid "{loaded} / {total} MB"
+msgstr "{loaded} / {total} MB"
+
+#: includes/class-ltts-admin.php:115
+msgid "Installed. Reloading the page…"
+msgstr "Yüklendi. Sayfa yenileniyor…"
+
+#: includes/class-ltts-admin.php:116
+msgid "Installation failed:"
+msgstr "Yükleme başarısız:"
+
+#: includes/class-ltts-admin.php:117
+msgid "Delete this component’s files from the server?"
+msgstr "Bu bileşenin dosyaları sunucudan silinsin mi?"
+
+#: includes/class-ltts-admin.php:118
+msgid "A download is running. If you leave this page it pauses; you can resume it later."
+msgstr "Yükleme sürüyor. Sayfadan ayrılırsanız indirme duraklar; daha sonra kaldığı yerden sürdürebilirsiniz."
+
+#: includes/class-ltts-admin.php:119
+msgid "Checking…"
+msgstr "Denetleniyor…"
+
+#: includes/class-ltts-admin.php:120
+msgid "OK"
+msgstr "Uygun"
+
+#: includes/class-ltts-admin.php:121
+msgid "Problem"
+msgstr "Sorunlu"
+
+#: includes/class-ltts-admin.php:122
+msgid "Could not check"
+msgstr "Denetlenemedi"
+
+#: includes/class-ltts-admin.php:123
+msgid "Loading…"
+msgstr "Yükleniyor…"
+
+#: includes/class-ltts-admin.php:124
+msgid "Added. Reloading the page…"
+msgstr "Eklendi. Sayfa yenileniyor…"
+
+#: includes/class-ltts-admin.php:125
+msgid "already in the list"
+msgstr "listede var"
+
+#: includes/class-ltts-admin.php:127
+msgid "%d voices"
+msgstr "%d ses"
+
+#: includes/class-ltts-admin.php:128
+msgid "Remove this voice from the list and delete its files?"
+msgstr "Bu ses listeden çıkarılsın ve dosyaları silinsin mi?"
+
+#: includes/class-ltts-admin.php:147
+msgid "reads your posts aloud on the reader’s device"
+msgstr "yazıları okurun cihazında seslendirir"
+
+#: includes/class-ltts-admin.php:206 includes/class-ltts-admin.php:631
+msgid "Finish the setup"
+msgstr "Kurulumu tamamlayın"
+
+#: includes/class-ltts-admin.php:211
+msgid "The player needs the runtime and a voice on your server. Recommended for your site language: %1$s, about %2$s MB in total. Files are saved in wp-content/uploads/local-tts/ and verified with SHA-256."
+msgstr "Oynatıcının çalışması için çalışma zamanı ve bir ses modeli sunucunuza indirilmelidir. Sitenizin dili için önerilen: %1$s, toplam yaklaşık %2$s MB. Dosyalar wp-content/uploads/local-tts/ klasörüne kaydedilir ve SHA-256 ile doğrulanır."
+
+#: includes/class-ltts-admin.php:218
+msgid "Install the recommended voice"
+msgstr "Önerilen sesi yükle"
+
+#: includes/class-ltts-admin.php:219
+msgid "Choose other voices"
+msgstr "Başka ses seç"
+
+#: includes/class-ltts-admin.php:247 includes/class-ltts-admin.php:540 includes/class-ltts-admin.php:653
+msgid "Player"
+msgstr "Oynatıcı"
+
+#: includes/class-ltts-admin.php:248
+msgid "Show the “Listen” button on the site"
+msgstr "Sitede “Yazıyı dinle” düğmesini göster"
+
+#: includes/class-ltts-admin.php:251
+msgid "Content types"
+msgstr "İçerik türleri"
+
+#: includes/class-ltts-admin.php:261
+msgid "Scope"
+msgstr "Kapsam"
+
+#: includes/class-ltts-admin.php:264
+msgid "All content that matches the rules"
+msgstr "Kurallara uyan bütün içerikler"
+
+#: includes/class-ltts-admin.php:265
+msgid "Only posts set to “Show” in the post box (pilot)"
+msgstr "Yalnız yazı kutusunda “Göster” seçilenler (pilot)"
+
+#: includes/class-ltts-admin.php:267
+msgid "Each post can also be switched on or off in the “Listen” box on its edit screen."
+msgstr "Her yazının düzenleme ekranındaki “Yazıyı dinle” kutusundan tek tek açılıp kapatılabilir."
+
+#: includes/class-ltts-admin.php:271
+msgid "Who sees it"
+msgstr "Kimler görsün"
+
+#: includes/class-ltts-admin.php:274
+msgid "All visitors"
+msgstr "Bütün ziyaretçiler"
+
+#: includes/class-ltts-admin.php:275
+msgid "Only logged-in editors (to try it before going live)"
+msgstr "Yalnız giriş yapmış editörler (yayına almadan deneme)"
+
+#: includes/class-ltts-admin.php:280
+msgid "Categories"
+msgstr "Kategoriler"
+
+#: includes/class-ltts-admin.php:283
+msgid "All categories"
+msgstr "Bütün kategoriler"
+
+#: includes/class-ltts-admin.php:284
+msgid "Only the selected categories"
+msgstr "Yalnız seçilen kategoriler"
+
+#: includes/class-ltts-admin.php:285
+msgid "All except the selected categories"
+msgstr "Seçilenler dışındakiler"
+
+#: includes/class-ltts-admin.php:295
+msgid "Minimum words"
+msgstr "En az sözcük"
+
+#: includes/class-ltts-admin.php:298
+msgid "Shorter posts get no button. 0 means no limit."
+msgstr "Bundan kısa yazılarda düğme gösterilmez. 0: sınır yok."
+
+#: includes/class-ltts-admin.php:302
+msgid "Placement"
+msgstr "Yerleşim"
+
+#: includes/class-ltts-admin.php:305
+msgid "Before the post"
+msgstr "Yazının başında"
+
+#: includes/class-ltts-admin.php:306
+msgid "After the post"
+msgstr "Yazının sonunda"
+
+#: includes/class-ltts-admin.php:307
+msgid "Only where the shortcode is"
+msgstr "Yalnız kısa kodun olduğu yerde"
+
+#: includes/class-ltts-admin.php:309
+msgid "The shortcode works with every placement; a post that contains it gets no automatic button."
+msgstr "Kısa kod her yerleşimde çalışır; yazıda varsa otomatik düğme eklenmez."
+
+#: includes/class-ltts-admin.php:313
+msgid "Plugin admin language"
+msgstr "Eklenti arayüz dili"
+
+#: includes/class-ltts-admin.php:316
+msgid "Same as my WordPress profile"
+msgstr "WordPress profilimdeki dil"
+
+#: includes/class-ltts-admin.php:321
+msgid "Only these settings pages. The player always speaks the language of the post it reads."
+msgstr "Yalnız bu ayar sayfaları için. Oynatıcı her zaman okuduğu yazının dilinde konuşur."
+
+#: includes/class-ltts-admin.php:345
+msgid "Installed files stay on your server and are sent from there to readers’ browsers. One voice is served per language; you can install several voices for a language and switch between them."
+msgstr "Yüklenen dosyalar sunucunuzda tutulur ve okurların tarayıcısına buradan gönderilir. Her dil için bir ses sunulur; aynı dilde birden çok ses yükleyip aralarında geçiş yapabilirsiniz."
+
+#: includes/class-ltts-admin.php:350
+msgid "An installation was interrupted: %s."
+msgstr "Yarım kalmış bir yükleme var: %s."
+
+#: includes/class-ltts-admin.php:352 includes/class-ltts-plugin.php:341
+msgid "Resume"
+msgstr "Sürdür"
+
+#: includes/class-ltts-admin.php:353
+msgid "Cancel"
+msgstr "Vazgeç"
+
+#: includes/class-ltts-admin.php:359
+msgid "Component"
+msgstr "Bileşen"
+
+#: includes/class-ltts-admin.php:360
+msgid "Language"
+msgstr "Dil"
+
+#: includes/class-ltts-admin.php:361
+msgid "Size"
+msgstr "Boyut"
+
+#: includes/class-ltts-admin.php:380
+msgid "required"
+msgstr "gerekli"
+
+#: includes/class-ltts-admin.php:381
+msgid "shared"
+msgstr "ortak"
+
+#: includes/class-ltts-admin.php:382
+msgid "added by you"
+msgstr "sizin eklediğiniz"
+
+#: includes/class-ltts-admin.php:385
+msgid "Licence: %s."
+msgstr "Lisans: %s."
+
+#: includes/class-ltts-admin.php:394
+msgid "Needs a missing component"
+msgstr "Eksik bir bileşen gerekiyor"
+
+#: includes/class-ltts-admin.php:396
+msgid "Installed"
+msgstr "Yüklü"
+
+#: includes/class-ltts-admin.php:398
+msgid "served"
+msgstr "sunuluyor"
+
+#: includes/class-ltts-admin.php:401
+msgid "Update available"
+msgstr "Güncelleme var"
+
+#: includes/class-ltts-admin.php:403
+msgid "Not installed"
+msgstr "Yüklü değil"
+
+#: includes/class-ltts-admin.php:405
+msgid "Coming later"
+msgstr "Yakında"
+
+#: includes/class-ltts-admin.php:411
+msgid "%1$s is third-party software distributed under its own licence: %2$s. Your site will send this voice to readers’ browsers, so make sure you may use and redistribute it. Continue?"
+msgstr "%1$s kendi lisansıyla dağıtılan üçüncü taraf yazılımdır: %2$s. Siteniz bu sesi okurların tarayıcılarına gönderecek; kullanma ve yeniden dağıtma hakkınız olduğundan emin olun. Devam edilsin mi?"
+
+#: includes/class-ltts-admin.php:412
+msgid "Update"
+msgstr "Güncelle"
+
+#: includes/class-ltts-admin.php:412
+msgid "Install"
+msgstr "Yükle"
+
+#: includes/class-ltts-admin.php:414
+msgid "If you uploaded the files by FTP"
+msgstr "Dosyaları FTP ile yüklediyseniz"
+
+#: includes/class-ltts-admin.php:414
+msgid "Check uploaded files"
+msgstr "Elle yüklenenleri denetle"
+
+#: includes/class-ltts-admin.php:417
+msgid "Remove"
+msgstr "Kaldır"
+
+#: includes/class-ltts-admin.php:420
+msgid "Credits & licence"
+msgstr "Emeği geçenler ve lisans"
+
+#: includes/class-ltts-admin.php:423
+msgid "Remove from list"
+msgstr "Listeden çıkar"
+
+#: includes/class-ltts-admin.php:440
+msgid "Served voices"
+msgstr "Sunulan sesler"
+
+#: includes/class-ltts-admin.php:441
+msgid "Choose which voice readers get for each language. Installed voices that are not served stay on the server."
+msgstr "Her dil için okurlara hangi sesin gönderileceğini seçin. Yüklü ama sunulmayan sesler sunucuda bekler."
+
+#: includes/class-ltts-admin.php:451
+msgid "Don’t serve (no audio in this language)"
+msgstr "Sunma (bu dilde seslendirme olmaz)"
+
+#: includes/class-ltts-admin.php:457
+msgid "Save"
+msgstr "Kaydet"
+
+#: includes/class-ltts-admin.php:464
+msgid "If your server cannot download files: manual upload"
+msgstr "Sunucu dışarıya bağlanamıyorsa: elle yükleme"
+
+#: includes/class-ltts-admin.php:465
+msgid "Download the files to your computer, upload them by FTP into the folders below, then click “Check uploaded files”. Files are checked by size and digest when possible."
+msgstr "Dosyaları bilgisayarınıza indirip FTP ile aşağıdaki klasörlere koyun, sonra “Elle yüklenenleri denetle” bağlantısına basın. Dosyalar mümkün olduğunda boyut ve özetle denetlenir."
+
+#: includes/class-ltts-admin.php:478
+msgid "(save as %s)"
+msgstr "(%s adıyla kaydedin)"
+
+#: includes/class-ltts-admin.php:492
+msgid "Add a voice"
+msgstr "Ses ekle"
+
+#: includes/class-ltts-admin.php:493
+msgid "Local TTS runs voice models; it does not include any. Add the voices you want to serve. Each voice is third-party data under its own licence, which you are responsible for respecting."
+msgstr "Local TTS ses modellerini çalıştırır; hiçbirini içermez. Sunmak istediğiniz sesleri ekleyin. Her ses kendi lisansına tabi üçüncü taraf verisidir ve lisansa uymak sizin sorumluluğunuzdadır."
+
+#: includes/class-ltts-admin.php:495
+msgid "From the Piper voice library"
+msgstr "Piper ses kütüphanesinden"
+
+#: includes/class-ltts-admin.php:496
+msgid "More than 100 voices in over 40 languages, from rhasspy/piper-voices on Hugging Face. Files are verified against the digests published there."
+msgstr "Hugging Face'teki rhasspy/piper-voices deposundan 40'tan fazla dilde 100'den fazla ses. Dosyalar orada yayımlanan özetlerle doğrulanır."
+
+#: includes/class-ltts-admin.php:498
+msgid "Load the voice list"
+msgstr "Ses listesini yükle"
+
+#: includes/class-ltts-admin.php:501
+msgid "Search voices"
+msgstr "Ses ara"
+
+#: includes/class-ltts-admin.php:502
+msgid "Search by language, country or name"
+msgstr "Dil, ülke ya da ada göre arayın"
+
+#: includes/class-ltts-admin.php:504 includes/class-ltts-admin.php:519
+msgid "Add to the list"
+msgstr "Listeye ekle"
+
+#: includes/class-ltts-admin.php:508
+msgid "From addresses (any Piper-compatible voice)"
+msgstr "Adreslerden (Piper uyumlu herhangi bir ses)"
+
+#: includes/class-ltts-admin.php:510
+msgid "Name"
+msgstr "Ad"
+
+#: includes/class-ltts-admin.php:511
+msgid "Language code"
+msgstr "Dil kodu"
+
+#: includes/class-ltts-admin.php:512
+msgid "Model (.onnx) address"
+msgstr "Model (.onnx) adresi"
+
+#: includes/class-ltts-admin.php:513
+msgid "Configuration (.onnx.json) address"
+msgstr "Yapılandırma (.onnx.json) adresi"
+
+#: includes/class-ltts-admin.php:514
+msgid "SHA-256 of the model (recommended)"
+msgstr "Modelin SHA-256 özeti (önerilir)"
+
+#: includes/class-ltts-admin.php:515
+msgid "Licence"
+msgstr "Lisans"
+
+#: includes/class-ltts-admin.php:516
+msgid "Credit shown to readers"
+msgstr "Okurlara gösterilen atıf"
+
+#: includes/class-ltts-admin.php:517
+msgid "Homepage or source"
+msgstr "Ana sayfa ya da kaynak"
+
+#: includes/class-ltts-admin.php:533
+msgid "Default speed"
+msgstr "Varsayılan hız"
+
+#: includes/class-ltts-admin.php:536
+msgid "1 is normal speed; between 0.7 and 1.5. Readers can change it in the player."
+msgstr "1 normal hızdır; 0,7 ile 1,5 arasında. Okurlar oynatıcıda değiştirebilir."
+
+#: includes/class-ltts-admin.php:542
+msgid "Highlight the paragraph being read"
+msgstr "Okunan paragrafı vurgula"
+
+#: includes/class-ltts-admin.php:543
+msgid "Show the download size before the first listen"
+msgstr "İlk dinlemeden önce indirme boyutunu göster"
+
+#: includes/class-ltts-admin.php:544
+msgid "Show the voice credit under the player (some voice licences require attribution)"
+msgstr "Ses atfını oynatıcının altında göster (bazı ses lisansları atıf ister)"
+
+#: includes/class-ltts-admin.php:548
+msgid "Parts not to read"
+msgstr "Okunmayacak alanlar"
+
+#: includes/class-ltts-admin.php:551
+msgid "One CSS selector per line. Code blocks, hidden elements, footnotes and share boxes are already skipped. To skip a single block, give it the ltts-skip class."
+msgstr "Her satıra bir CSS seçicisi. Kod blokları, gizli öğeler, dipnotlar ve paylaşım kutuları zaten atlanır. Tek bir bloğu atlamak için bloğa ltts-skip sınıfını ekleyin."
+
+#: includes/class-ltts-admin.php:569
+msgid "Plugin version"
+msgstr "Eklenti sürümü"
+
+#: includes/class-ltts-admin.php:570
+msgid "Download folder"
+msgstr "İndirme klasörü"
+
+#: includes/class-ltts-admin.php:571
+msgid "installed"
+msgstr "yüklü"
+
+#: includes/class-ltts-admin.php:571
+msgid "not installed"
+msgstr "yüklü değil"
+
+#: includes/class-ltts-admin.php:572
+msgid "Served languages"
+msgstr "Sunulan diller"
+
+#: includes/class-ltts-admin.php:572
+msgid "none"
+msgstr "yok"
+
+#: includes/class-ltts-admin.php:573
+msgid "yes"
+msgstr "evet"
+
+#: includes/class-ltts-admin.php:573
+msgid "no (the browser cache and integrity checks need HTTPS)"
+msgstr "hayır (tarayıcı önbelleği ve bütünlük denetimi HTTPS ister)"
+
+#: includes/class-ltts-admin.php:575
+msgid "%d s"
+msgstr "%d sn"
+
+#: includes/class-ltts-admin.php:575
+msgid "unlimited"
+msgstr "sınırsız"
+
+#: includes/class-ltts-admin.php:576
+msgid "Site language"
+msgstr "Site dili"
+
+#: includes/class-ltts-admin.php:589
+msgid "Server check"
+msgstr "Sunucu denetimi"
+
+#: includes/class-ltts-admin.php:590
+msgid "Tests whether the server can download files and serves .wasm and .mjs files with the right type."
+msgstr "Sunucunun dosya indirip indiremediğini ve .wasm/.mjs dosyalarını doğru türle sunup sunmadığını dener."
+
+#: includes/class-ltts-admin.php:591
+msgid "Run check"
+msgstr "Denetle"
+
+#: includes/class-ltts-admin.php:593
+msgid "Outgoing connection (for downloads)"
+msgstr "Dış bağlantı (indirme için)"
+
+#: includes/class-ltts-admin.php:598
+msgid "Check in the browser"
+msgstr "Tarayıcıda kontrol edilecekler"
+
+#: includes/class-ltts-admin.php:600
+msgid "If the site has a Content Security Policy, it must allow: script-src 'self' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self'."
+msgstr "Sitede İçerik Güvenliği Politikası (CSP) varsa şunlara izin vermeli: script-src 'self' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self'."
+
+#: includes/class-ltts-admin.php:601
+msgid "Caching and minification plugins must not combine assets/js/player.js or tts-worker.js."
+msgstr "Önbellek ve küçültme eklentileri assets/js/player.js ve tts-worker.js dosyalarını birleştirmemeli."
+
+#: includes/class-ltts-admin.php:602
+msgid "A second post must not download the voice again (Developer tools → Application → Cache Storage)."
+msgstr "İkinci yazıda ses yeniden indirilmemeli (Geliştirici araçları → Application → Cache Storage)."
+
+#: includes/class-ltts-admin.php:617
+msgid "Local TTS: settings, post options and downloaded voices were moved over from the previous plugin (Kulak Ver / asosyoloji-dinle), which has been deactivated. You can delete it from the Plugins page."
+msgstr "Local TTS: ayarlar, yazı seçenekleri ve indirilmiş sesler önceki eklentiden (Kulak Ver / asosyoloji-dinle) taşındı; eski eklenti kapatıldı. Eklentiler sayfasından silebilirsiniz."
+
+#: includes/class-ltts-admin.php:629
+msgid "Local TTS: no voice is installed yet, so visitors don’t see the “Listen” button."
+msgstr "Local TTS: henüz ses yüklenmedi; “Yazıyı dinle” düğmesi ziyaretçilere gösterilmiyor."
+
+#: includes/class-ltts-admin.php:639 includes/class-ltts-plugin.php:320
+msgid "Listen"
+msgstr "Yazıyı dinle"
+
+#: includes/class-ltts-admin.php:647
+msgid "Automatic"
+msgstr "Otomatik"
+
+#: includes/class-ltts-admin.php:655
+msgid "Use site settings"
+msgstr "Site ayarına göre"
+
+#: includes/class-ltts-admin.php:656
+msgid "Show"
+msgstr "Göster"
+
+#: includes/class-ltts-admin.php:657
+msgid "Hide"
+msgstr "Gösterme"
+
+#: includes/class-ltts-admin.php:661
+msgid "Post language"
+msgstr "Yazı dili"
+
+#: includes/class-ltts-catalog.php:95
+msgid "Runs the voice models in the browser. Required by every voice."
+msgstr "Ses modellerini tarayıcıda çalıştırır. Bütün sesler bunu kullanır."
+
+#: includes/class-ltts-catalog.php:116
+msgid "Converts text to phonemes for Piper voices, in the browser. Installed automatically with the first Piper voice."
+msgstr "Piper sesleri için metni tarayıcıda fonemlere çevirir. İlk Piper sesiyle birlikte otomatik yüklenir."
+
+#: includes/class-ltts-catalog.php:137
+msgid "EMA Lightning (Turkish)"
+msgstr "EMA Lightning (Türkçe)"
+
+#: includes/class-ltts-catalog.php:138
+msgid "Recommended for Turkish. Full precision (fp32)."
+msgstr "Türkçe için önerilen. Tam duyarlıklı (fp32)."
+
+#: includes/class-ltts-catalog.php:144
+msgid "EMA Lightning (Turkish, light)"
+msgstr "EMA Lightning (Türkçe, hafif)"
+
+#: includes/class-ltts-catalog.php:145
+msgid "Experimental. The sound graph uses half precision (fp16): about 9 MB smaller. Compare the sound quality on real devices before serving it."
+msgstr "Deneysel. Ses grafiği yarım duyarlıklı (fp16): yaklaşık 9 MB daha küçük. Sunmadan önce ses kalitesini gerçek cihazlarda karşılaştırın."
+
+#: includes/class-ltts-catalog.php:149
+msgid "Fine-tuned from the Piper “lessac” voice, whose Blizzard 2013 dataset licence may restrict commercial use. Check before serving on a commercial site."
+msgstr "Piper “lessac” sesinden ince ayarla türetildi; lessac'ın Blizzard 2013 veri seti lisansı ticari kullanımı kısıtlayabilir. Ticari bir sitede sunmadan önce kontrol edin."
+
+#: includes/class-ltts-catalog.php:153
+msgid "Piper LJSpeech (English, US)"
+msgstr "Piper LJSpeech (İngilizce, ABD)"
+
+#: includes/class-ltts-catalog.php:154
+msgid "Female voice. Trained from scratch on the public-domain LJ Speech dataset."
+msgstr "Kadın sesi. Kamu malı LJ Speech veri setiyle sıfırdan eğitildi."
+
+#: includes/class-ltts-catalog.php:155
+msgid "Public domain dataset"
+msgstr "Kamu malı veri seti"
+
+#: includes/class-ltts-catalog.php:160
+msgid "Piper Thorsten (German)"
+msgstr "Piper Thorsten (Almanca)"
+
+#: includes/class-ltts-catalog.php:161
+msgid "Male voice. Thorsten-Voice dataset (CC0)."
+msgstr "Erkek sesi. Thorsten-Voice veri seti (CC0)."
+
+#: includes/class-ltts-catalog.php:162 includes/class-ltts-catalog.php:176
+msgid "CC0 dataset"
+msgstr "CC0 veri seti"
+
+#: includes/class-ltts-catalog.php:167
+msgid "Piper SIWIS (French)"
+msgstr "Piper SIWIS (Fransızca)"
+
+#: includes/class-ltts-catalog.php:168
+msgid "Female voice. SIWIS dataset (CC BY 4.0)."
+msgstr "Kadın sesi. SIWIS veri seti (CC BY 4.0)."
+
+#: includes/class-ltts-catalog.php:169
+msgid "CC BY 4.0 dataset"
+msgstr "CC BY 4.0 veri seti"
+
+#: includes/class-ltts-catalog.php:174
+msgid "Piper davefx (Spanish, Spain)"
+msgstr "Piper davefx (İspanyolca, İspanya)"
+
+#: includes/class-ltts-catalog.php:175
+msgid "Male voice. NabuCasa voice dataset (CC0)."
+msgstr "Erkek sesi. NabuCasa ses veri seti (CC0)."
+
+#: includes/class-ltts-i18n.php:52
+msgid "English"
+msgstr "İngilizce"
+
+#: includes/class-ltts-i18n.php:53
+msgid "Turkish"
+msgstr "Türkçe"
+
+#: includes/class-ltts-i18n.php:54
+msgid "German"
+msgstr "Almanca"
+
+#: includes/class-ltts-i18n.php:55
+msgid "French"
+msgstr "Fransızca"
+
+#: includes/class-ltts-i18n.php:56
+msgid "Spanish"
+msgstr "İspanyolca"
+
+#: includes/class-ltts-installer.php:58
+msgid "No installation is running."
+msgstr "Süren bir yükleme yok."
+
+#: includes/class-ltts-installer.php:72
+msgid "Unknown component."
+msgstr "Bilinmeyen bileşen."
+
+#: includes/class-ltts-installer.php:139 includes/class-ltts-installer.php:501
+msgid "This component cannot be installed by this version."
+msgstr "Bu bileşen bu sürümde yüklenemez."
+
+#: includes/class-ltts-installer.php:143
+msgid "Another installation is running."
+msgstr "Başka bir yükleme sürüyor."
+
+#: includes/class-ltts-installer.php:146
+msgid "Cannot write to the download folder (wp-content/uploads)."
+msgstr "İndirme klasörüne yazılamıyor (wp-content/uploads)."
+
+#: includes/class-ltts-installer.php:211
+msgid "Could not read file details from Hugging Face: %s"
+msgstr "Dosya bilgileri Hugging Face'ten okunamadı: %s"
+
+#: includes/class-ltts-installer.php:226
+msgid "File not found on Hugging Face: %s"
+msgstr "Dosya Hugging Face'te bulunamadı: %s"
+
+#: includes/class-ltts-installer.php:278
+msgid "The component is not in the catalog."
+msgstr "Bileşen katalogda yok."
+
+#: includes/class-ltts-installer.php:338
+msgid "%s could not be downloaded from any source."
+msgstr "%s hiçbir kaynaktan indirilemedi."
+
+#: includes/class-ltts-installer.php:403
+msgid "Could not download %1$s. Details: %2$s"
+msgstr "%1$s indirilemedi. Ayrıntı: %2$s"
+
+#: includes/class-ltts-installer.php:445
+msgid "Could not download %1$s: %2$s"
+msgstr "%1$s indirilemedi: %2$s"
+
+#: includes/class-ltts-installer.php:467
+msgid "Could not verify %1$s (size or SHA-256 does not match). Details: %2$s"
+msgstr "%1$s doğrulanamadı (boyut veya SHA-256 tutmuyor). Ayrıntı: %2$s"
+
+#: includes/class-ltts-installer.php:530
+msgid "File missing: %s"
+msgstr "Dosya yok: %s"
+
+#: includes/class-ltts-installer.php:535
+msgid "Could not verify: %s"
+msgstr "Doğrulanamadı: %s"
+
+#: includes/class-ltts-plugin.php:321
+msgid "Preparing"
+msgstr "Hazırlanıyor"
+
+#: includes/class-ltts-plugin.php:322
+msgid "Reading with a synthetic voice"
+msgstr "Yapay sesle okunuyor"
+
+#: includes/class-ltts-plugin.php:323
+msgid "Paused"
+msgstr "Duraklatıldı"
+
+#: includes/class-ltts-plugin.php:324
+msgid "Preparing audio"
+msgstr "Ses hazırlanıyor"
+
+#: includes/class-ltts-plugin.php:325
+msgid "Couldn’t play"
+msgstr "Dinlenemedi"
+
+#: includes/class-ltts-plugin.php:326
+msgid "End of the post"
+msgstr "Yazının sonu"
+
+#: includes/class-ltts-plugin.php:327
+msgid "Preparing the voice…"
+msgstr "Ses modeli hazırlanıyor…"
+
+#: includes/class-ltts-plugin.php:329
+msgid "Downloading the voice: {loaded} / {total} MB"
+msgstr "Ses modeli indiriliyor: {loaded} / {total} MB"
+
+#: includes/class-ltts-plugin.php:331
+msgid "The first listen downloads about {size} MB. Audio is generated on your device."
+msgstr "İlk dinlemede yaklaşık {size} MB indirilir. Ses cihazınızda üretilir."
+
+#: includes/class-ltts-plugin.php:332
+msgid "Tap anywhere on the strip to listen from there."
+msgstr "Şeritten bir yere dokunarak oradan dinleyebilirsiniz."
+
+#: includes/class-ltts-plugin.php:334
+msgid "{n} min"
+msgstr "{n} dk"
+
+#: includes/class-ltts-plugin.php:336
+msgid "{n} s"
+msgstr "{n} sn"
+
+#: includes/class-ltts-plugin.php:338
+msgid "{t} left"
+msgstr "{t} kaldı"
+
+#: includes/class-ltts-plugin.php:339
+msgid "Play"
+msgstr "Dinle"
+
+#: includes/class-ltts-plugin.php:340
+msgid "Pause"
+msgstr "Duraklat"
+
+#: includes/class-ltts-plugin.php:342
+msgid "Stop"
+msgstr "Durdur"
+
+#: includes/class-ltts-plugin.php:343
+msgid "Try again"
+msgstr "Yeniden dene"
+
+#: includes/class-ltts-plugin.php:345
+msgid "Reading speed: {v}"
+msgstr "Okuma hızı: {v}"
+
+#: includes/class-ltts-plugin.php:346
+msgid "Go to the current paragraph"
+msgstr "Okunan yere git"
+
+#: includes/class-ltts-plugin.php:347
+msgid "Position in the post"
+msgstr "Yazıdaki konum"
+
+#: includes/class-ltts-plugin.php:349
+msgid "Part {n} of {total}"
+msgstr "{n}. bölüm, {total} bölümden"
+
+#: includes/class-ltts-plugin.php:351
+msgid "Voice: {credit}"
+msgstr "Ses: {credit}"
+
+#: includes/class-ltts-plugin.php:353
+msgid "The voice could not be downloaded. Check your connection and try again."
+msgstr "Ses modeli indirilemedi. Bağlantınızı kontrol edip yeniden deneyin."
+
+#: includes/class-ltts-plugin.php:354
+msgid "A downloaded voice file could not be verified. Try again."
+msgstr "İndirilen model dosyası doğrulanamadı. Yeniden deneyin."
+
+#: includes/class-ltts-plugin.php:355
+msgid "The voice could not be opened in this browser. Reload the page and try again."
+msgstr "Ses modeli bu tarayıcıda açılamadı. Sayfayı yenileyip yeniden deneyin."
+
+#: includes/class-ltts-plugin.php:356
+msgid "Your browser does not support on-device speech."
+msgstr "Tarayıcınız cihazda seslendirmeyi desteklemiyor."
+
+#: includes/class-ltts-plugin.php:357
+msgid "Something went wrong while generating audio. Try again."
+msgstr "Ses üretilirken bir sorun oluştu. Yeniden deneyin."
+
+#: includes/class-ltts-plugin.php:358
+msgid "No voice is available for this post’s language yet."
+msgstr "Bu yazının dili için seslendirme henüz yok."
+
+#: includes/class-ltts-plugin.php:359
+msgid "This post has no text to read."
+msgstr "Bu yazıda seslendirilecek metin bulunamadı."
+
+#: includes/class-ltts-plugin.php:360
+msgid "Not enough storage to keep the voice; it may download again next time."
+msgstr "Cihazda yer olmadığı için model kaydedilemedi; sonraki ziyarette yeniden indirilebilir."
+
+#: includes/class-ltts-updater.php:221
+msgid "Could not rename the downloaded plugin folder."
+msgstr "İndirilen eklenti klasörü yeniden adlandırılamadı."
+
+#: includes/class-ltts-voices.php:130
+msgid "Could not load the Piper voice list: %s"
+msgstr "Piper ses listesi yüklenemedi: %s"
+
+#: includes/class-ltts-voices.php:220
+msgid "This voice is not in the Piper library."
+msgstr "Bu ses Piper kütüphanesinde yok."
+
+#: includes/class-ltts-voices.php:233
+msgid "Piper %1$s (%2$s, %3$s)"
+msgstr "Piper %1$s (%2$s, %3$s)"
+
+#: includes/class-ltts-voices.php:234
+msgid "See the model card"
+msgstr "Model kartına bakın"
+
+#: includes/class-ltts-voices.php:238
+msgid "Added from the Piper library. %d speakers; the first one is used."
+msgstr "Piper kütüphanesinden eklendi. %d konuşmacı var; ilki kullanılır."
+
+#: includes/class-ltts-voices.php:239
+msgid "Added from the Piper library."
+msgstr "Piper kütüphanesinden eklendi."
+
+#: includes/class-ltts-voices.php:240
+msgid "Check the model card for the dataset licence before serving it."
+msgstr "Sunmadan önce veri kümesi lisansı için model kartına bakın."
+
+#: includes/class-ltts-voices.php:260
+msgid "Enter a name, a language code and two HTTPS addresses."
+msgstr "Bir ad, bir dil kodu ve iki HTTPS adresi girin."
+
+#: includes/class-ltts-voices.php:263
+msgid "The SHA-256 must be 64 hexadecimal characters."
+msgstr "SHA-256 64 onaltılık karakter olmalıdır."
+
+#: includes/class-ltts-voices.php:274
+msgid "Not specified"
+msgstr "Belirtilmemiş"
+
+#: includes/class-ltts-voices.php:278
+msgid "Added from addresses. The model file is checked against the SHA-256 you entered."
+msgstr "Adreslerden eklendi. Model dosyası girdiğiniz SHA-256 ile denetlenir."
+
+#: includes/class-ltts-voices.php:279
+msgid "Added from addresses. No SHA-256 was given, so the file is trusted as first downloaded."
+msgstr "Adreslerden eklendi. SHA-256 verilmediği için dosya ilk indirildiği hâliyle güvenilir kabul edilir."
+
+#: includes/class-ltts-voices.php:289
+msgid "This voice is already in the list."
+msgstr "Bu ses zaten listede."
+
+#: includes/class-ltts-voices.php:305
+msgid "Only voices you added can be removed from the list."
+msgstr "Yalnız sizin eklediğiniz sesler listeden çıkarılabilir."

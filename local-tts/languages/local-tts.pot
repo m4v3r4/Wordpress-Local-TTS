@@ -1,0 +1,867 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Local TTS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-08\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Domain: local-tts\n"
+
+#: includes/class-ltts-admin.php:73
+msgid "Settings"
+msgstr ""
+
+#: includes/class-ltts-admin.php:88
+msgid "Display"
+msgstr ""
+
+#: includes/class-ltts-admin.php:89
+msgid "Voices"
+msgstr ""
+
+#: includes/class-ltts-admin.php:90
+msgid "Reading"
+msgstr ""
+
+#: includes/class-ltts-admin.php:91 includes/class-ltts-admin.php:362
+msgid "Status"
+msgstr ""
+
+#: includes/class-ltts-admin.php:112
+msgid "Downloading…"
+msgstr ""
+
+#: includes/class-ltts-admin.php:114
+msgid "{loaded} / {total} MB"
+msgstr ""
+
+#: includes/class-ltts-admin.php:115
+msgid "Installed. Reloading the page…"
+msgstr ""
+
+#: includes/class-ltts-admin.php:116
+msgid "Installation failed:"
+msgstr ""
+
+#: includes/class-ltts-admin.php:117
+msgid "Delete this component’s files from the server?"
+msgstr ""
+
+#: includes/class-ltts-admin.php:118
+msgid "A download is running. If you leave this page it pauses; you can resume it later."
+msgstr ""
+
+#: includes/class-ltts-admin.php:119
+msgid "Checking…"
+msgstr ""
+
+#: includes/class-ltts-admin.php:120
+msgid "OK"
+msgstr ""
+
+#: includes/class-ltts-admin.php:121
+msgid "Problem"
+msgstr ""
+
+#: includes/class-ltts-admin.php:122
+msgid "Could not check"
+msgstr ""
+
+#: includes/class-ltts-admin.php:123
+msgid "Loading…"
+msgstr ""
+
+#: includes/class-ltts-admin.php:124
+msgid "Added. Reloading the page…"
+msgstr ""
+
+#: includes/class-ltts-admin.php:125
+msgid "already in the list"
+msgstr ""
+
+#: includes/class-ltts-admin.php:127
+msgid "%d voices"
+msgstr ""
+
+#: includes/class-ltts-admin.php:128
+msgid "Remove this voice from the list and delete its files?"
+msgstr ""
+
+#: includes/class-ltts-admin.php:147
+msgid "reads your posts aloud on the reader’s device"
+msgstr ""
+
+#: includes/class-ltts-admin.php:206 includes/class-ltts-admin.php:631
+msgid "Finish the setup"
+msgstr ""
+
+#: includes/class-ltts-admin.php:211
+msgid "The player needs the runtime and a voice on your server. Recommended for your site language: %1$s, about %2$s MB in total. Files are saved in wp-content/uploads/local-tts/ and verified with SHA-256."
+msgstr ""
+
+#: includes/class-ltts-admin.php:218
+msgid "Install the recommended voice"
+msgstr ""
+
+#: includes/class-ltts-admin.php:219
+msgid "Choose other voices"
+msgstr ""
+
+#: includes/class-ltts-admin.php:247 includes/class-ltts-admin.php:540 includes/class-ltts-admin.php:653
+msgid "Player"
+msgstr ""
+
+#: includes/class-ltts-admin.php:248
+msgid "Show the “Listen” button on the site"
+msgstr ""
+
+#: includes/class-ltts-admin.php:251
+msgid "Content types"
+msgstr ""
+
+#: includes/class-ltts-admin.php:261
+msgid "Scope"
+msgstr ""
+
+#: includes/class-ltts-admin.php:264
+msgid "All content that matches the rules"
+msgstr ""
+
+#: includes/class-ltts-admin.php:265
+msgid "Only posts set to “Show” in the post box (pilot)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:267
+msgid "Each post can also be switched on or off in the “Listen” box on its edit screen."
+msgstr ""
+
+#: includes/class-ltts-admin.php:271
+msgid "Who sees it"
+msgstr ""
+
+#: includes/class-ltts-admin.php:274
+msgid "All visitors"
+msgstr ""
+
+#: includes/class-ltts-admin.php:275
+msgid "Only logged-in editors (to try it before going live)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:280
+msgid "Categories"
+msgstr ""
+
+#: includes/class-ltts-admin.php:283
+msgid "All categories"
+msgstr ""
+
+#: includes/class-ltts-admin.php:284
+msgid "Only the selected categories"
+msgstr ""
+
+#: includes/class-ltts-admin.php:285
+msgid "All except the selected categories"
+msgstr ""
+
+#: includes/class-ltts-admin.php:295
+msgid "Minimum words"
+msgstr ""
+
+#: includes/class-ltts-admin.php:298
+msgid "Shorter posts get no button. 0 means no limit."
+msgstr ""
+
+#: includes/class-ltts-admin.php:302
+msgid "Placement"
+msgstr ""
+
+#: includes/class-ltts-admin.php:305
+msgid "Before the post"
+msgstr ""
+
+#: includes/class-ltts-admin.php:306
+msgid "After the post"
+msgstr ""
+
+#: includes/class-ltts-admin.php:307
+msgid "Only where the shortcode is"
+msgstr ""
+
+#: includes/class-ltts-admin.php:309
+msgid "The shortcode works with every placement; a post that contains it gets no automatic button."
+msgstr ""
+
+#: includes/class-ltts-admin.php:313
+msgid "Plugin admin language"
+msgstr ""
+
+#: includes/class-ltts-admin.php:316
+msgid "Same as my WordPress profile"
+msgstr ""
+
+#: includes/class-ltts-admin.php:321
+msgid "Only these settings pages. The player always speaks the language of the post it reads."
+msgstr ""
+
+#: includes/class-ltts-admin.php:345
+msgid "Installed files stay on your server and are sent from there to readers’ browsers. One voice is served per language; you can install several voices for a language and switch between them."
+msgstr ""
+
+#: includes/class-ltts-admin.php:350
+msgid "An installation was interrupted: %s."
+msgstr ""
+
+#: includes/class-ltts-admin.php:352 includes/class-ltts-plugin.php:341
+msgid "Resume"
+msgstr ""
+
+#: includes/class-ltts-admin.php:353
+msgid "Cancel"
+msgstr ""
+
+#: includes/class-ltts-admin.php:359
+msgid "Component"
+msgstr ""
+
+#: includes/class-ltts-admin.php:360
+msgid "Language"
+msgstr ""
+
+#: includes/class-ltts-admin.php:361
+msgid "Size"
+msgstr ""
+
+#: includes/class-ltts-admin.php:380
+msgid "required"
+msgstr ""
+
+#: includes/class-ltts-admin.php:381
+msgid "shared"
+msgstr ""
+
+#: includes/class-ltts-admin.php:382
+msgid "added by you"
+msgstr ""
+
+#: includes/class-ltts-admin.php:385
+msgid "Licence: %s."
+msgstr ""
+
+#: includes/class-ltts-admin.php:394
+msgid "Needs a missing component"
+msgstr ""
+
+#: includes/class-ltts-admin.php:396
+msgid "Installed"
+msgstr ""
+
+#: includes/class-ltts-admin.php:398
+msgid "served"
+msgstr ""
+
+#: includes/class-ltts-admin.php:401
+msgid "Update available"
+msgstr ""
+
+#: includes/class-ltts-admin.php:403
+msgid "Not installed"
+msgstr ""
+
+#: includes/class-ltts-admin.php:405
+msgid "Coming later"
+msgstr ""
+
+#: includes/class-ltts-admin.php:411
+msgid "%1$s is third-party software distributed under its own licence: %2$s. Your site will send this voice to readers’ browsers, so make sure you may use and redistribute it. Continue?"
+msgstr ""
+
+#: includes/class-ltts-admin.php:412
+msgid "Update"
+msgstr ""
+
+#: includes/class-ltts-admin.php:412
+msgid "Install"
+msgstr ""
+
+#: includes/class-ltts-admin.php:414
+msgid "If you uploaded the files by FTP"
+msgstr ""
+
+#: includes/class-ltts-admin.php:414
+msgid "Check uploaded files"
+msgstr ""
+
+#: includes/class-ltts-admin.php:417
+msgid "Remove"
+msgstr ""
+
+#: includes/class-ltts-admin.php:420
+msgid "Credits & licence"
+msgstr ""
+
+#: includes/class-ltts-admin.php:423
+msgid "Remove from list"
+msgstr ""
+
+#: includes/class-ltts-admin.php:440
+msgid "Served voices"
+msgstr ""
+
+#: includes/class-ltts-admin.php:441
+msgid "Choose which voice readers get for each language. Installed voices that are not served stay on the server."
+msgstr ""
+
+#: includes/class-ltts-admin.php:451
+msgid "Don’t serve (no audio in this language)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:457
+msgid "Save"
+msgstr ""
+
+#: includes/class-ltts-admin.php:464
+msgid "If your server cannot download files: manual upload"
+msgstr ""
+
+#: includes/class-ltts-admin.php:465
+msgid "Download the files to your computer, upload them by FTP into the folders below, then click “Check uploaded files”. Files are checked by size and digest when possible."
+msgstr ""
+
+#: includes/class-ltts-admin.php:478
+msgid "(save as %s)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:492
+msgid "Add a voice"
+msgstr ""
+
+#: includes/class-ltts-admin.php:493
+msgid "Local TTS runs voice models; it does not include any. Add the voices you want to serve. Each voice is third-party data under its own licence, which you are responsible for respecting."
+msgstr ""
+
+#: includes/class-ltts-admin.php:495
+msgid "From the Piper voice library"
+msgstr ""
+
+#: includes/class-ltts-admin.php:496
+msgid "More than 100 voices in over 40 languages, from rhasspy/piper-voices on Hugging Face. Files are verified against the digests published there."
+msgstr ""
+
+#: includes/class-ltts-admin.php:498
+msgid "Load the voice list"
+msgstr ""
+
+#: includes/class-ltts-admin.php:501
+msgid "Search voices"
+msgstr ""
+
+#: includes/class-ltts-admin.php:502
+msgid "Search by language, country or name"
+msgstr ""
+
+#: includes/class-ltts-admin.php:504 includes/class-ltts-admin.php:519
+msgid "Add to the list"
+msgstr ""
+
+#: includes/class-ltts-admin.php:508
+msgid "From addresses (any Piper-compatible voice)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:510
+msgid "Name"
+msgstr ""
+
+#: includes/class-ltts-admin.php:511
+msgid "Language code"
+msgstr ""
+
+#: includes/class-ltts-admin.php:512
+msgid "Model (.onnx) address"
+msgstr ""
+
+#: includes/class-ltts-admin.php:513
+msgid "Configuration (.onnx.json) address"
+msgstr ""
+
+#: includes/class-ltts-admin.php:514
+msgid "SHA-256 of the model (recommended)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:515
+msgid "Licence"
+msgstr ""
+
+#: includes/class-ltts-admin.php:516
+msgid "Credit shown to readers"
+msgstr ""
+
+#: includes/class-ltts-admin.php:517
+msgid "Homepage or source"
+msgstr ""
+
+#: includes/class-ltts-admin.php:533
+msgid "Default speed"
+msgstr ""
+
+#: includes/class-ltts-admin.php:536
+msgid "1 is normal speed; between 0.7 and 1.5. Readers can change it in the player."
+msgstr ""
+
+#: includes/class-ltts-admin.php:542
+msgid "Highlight the paragraph being read"
+msgstr ""
+
+#: includes/class-ltts-admin.php:543
+msgid "Show the download size before the first listen"
+msgstr ""
+
+#: includes/class-ltts-admin.php:544
+msgid "Show the voice credit under the player (some voice licences require attribution)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:548
+msgid "Parts not to read"
+msgstr ""
+
+#: includes/class-ltts-admin.php:551
+msgid "One CSS selector per line. Code blocks, hidden elements, footnotes and share boxes are already skipped. To skip a single block, give it the ltts-skip class."
+msgstr ""
+
+#: includes/class-ltts-admin.php:569
+msgid "Plugin version"
+msgstr ""
+
+#: includes/class-ltts-admin.php:570
+msgid "Download folder"
+msgstr ""
+
+#: includes/class-ltts-admin.php:571
+msgid "installed"
+msgstr ""
+
+#: includes/class-ltts-admin.php:571
+msgid "not installed"
+msgstr ""
+
+#: includes/class-ltts-admin.php:572
+msgid "Served languages"
+msgstr ""
+
+#: includes/class-ltts-admin.php:572
+msgid "none"
+msgstr ""
+
+#: includes/class-ltts-admin.php:573
+msgid "yes"
+msgstr ""
+
+#: includes/class-ltts-admin.php:573
+msgid "no (the browser cache and integrity checks need HTTPS)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:575
+msgid "%d s"
+msgstr ""
+
+#: includes/class-ltts-admin.php:575
+msgid "unlimited"
+msgstr ""
+
+#: includes/class-ltts-admin.php:576
+msgid "Site language"
+msgstr ""
+
+#: includes/class-ltts-admin.php:589
+msgid "Server check"
+msgstr ""
+
+#: includes/class-ltts-admin.php:590
+msgid "Tests whether the server can download files and serves .wasm and .mjs files with the right type."
+msgstr ""
+
+#: includes/class-ltts-admin.php:591
+msgid "Run check"
+msgstr ""
+
+#: includes/class-ltts-admin.php:593
+msgid "Outgoing connection (for downloads)"
+msgstr ""
+
+#: includes/class-ltts-admin.php:598
+msgid "Check in the browser"
+msgstr ""
+
+#: includes/class-ltts-admin.php:600
+msgid "If the site has a Content Security Policy, it must allow: script-src 'self' 'wasm-unsafe-eval' blob:; worker-src 'self' blob:; connect-src 'self'."
+msgstr ""
+
+#: includes/class-ltts-admin.php:601
+msgid "Caching and minification plugins must not combine assets/js/player.js or tts-worker.js."
+msgstr ""
+
+#: includes/class-ltts-admin.php:602
+msgid "A second post must not download the voice again (Developer tools → Application → Cache Storage)."
+msgstr ""
+
+#: includes/class-ltts-admin.php:617
+msgid "Local TTS: settings, post options and downloaded voices were moved over from the previous plugin (Kulak Ver / asosyoloji-dinle), which has been deactivated. You can delete it from the Plugins page."
+msgstr ""
+
+#: includes/class-ltts-admin.php:629
+msgid "Local TTS: no voice is installed yet, so visitors don’t see the “Listen” button."
+msgstr ""
+
+#: includes/class-ltts-admin.php:639 includes/class-ltts-plugin.php:320
+msgid "Listen"
+msgstr ""
+
+#: includes/class-ltts-admin.php:647
+msgid "Automatic"
+msgstr ""
+
+#: includes/class-ltts-admin.php:655
+msgid "Use site settings"
+msgstr ""
+
+#: includes/class-ltts-admin.php:656
+msgid "Show"
+msgstr ""
+
+#: includes/class-ltts-admin.php:657
+msgid "Hide"
+msgstr ""
+
+#: includes/class-ltts-admin.php:661
+msgid "Post language"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:95
+msgid "Runs the voice models in the browser. Required by every voice."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:116
+msgid "Converts text to phonemes for Piper voices, in the browser. Installed automatically with the first Piper voice."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:137
+msgid "EMA Lightning (Turkish)"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:138
+msgid "Recommended for Turkish. Full precision (fp32)."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:144
+msgid "EMA Lightning (Turkish, light)"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:145
+msgid "Experimental. The sound graph uses half precision (fp16): about 9 MB smaller. Compare the sound quality on real devices before serving it."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:149
+msgid "Fine-tuned from the Piper “lessac” voice, whose Blizzard 2013 dataset licence may restrict commercial use. Check before serving on a commercial site."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:153
+msgid "Piper LJSpeech (English, US)"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:154
+msgid "Female voice. Trained from scratch on the public-domain LJ Speech dataset."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:155
+msgid "Public domain dataset"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:160
+msgid "Piper Thorsten (German)"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:161
+msgid "Male voice. Thorsten-Voice dataset (CC0)."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:162 includes/class-ltts-catalog.php:176
+msgid "CC0 dataset"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:167
+msgid "Piper SIWIS (French)"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:168
+msgid "Female voice. SIWIS dataset (CC BY 4.0)."
+msgstr ""
+
+#: includes/class-ltts-catalog.php:169
+msgid "CC BY 4.0 dataset"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:174
+msgid "Piper davefx (Spanish, Spain)"
+msgstr ""
+
+#: includes/class-ltts-catalog.php:175
+msgid "Male voice. NabuCasa voice dataset (CC0)."
+msgstr ""
+
+#: includes/class-ltts-i18n.php:52
+msgid "English"
+msgstr ""
+
+#: includes/class-ltts-i18n.php:53
+msgid "Turkish"
+msgstr ""
+
+#: includes/class-ltts-i18n.php:54
+msgid "German"
+msgstr ""
+
+#: includes/class-ltts-i18n.php:55
+msgid "French"
+msgstr ""
+
+#: includes/class-ltts-i18n.php:56
+msgid "Spanish"
+msgstr ""
+
+#: includes/class-ltts-installer.php:58
+msgid "No installation is running."
+msgstr ""
+
+#: includes/class-ltts-installer.php:72
+msgid "Unknown component."
+msgstr ""
+
+#: includes/class-ltts-installer.php:139 includes/class-ltts-installer.php:501
+msgid "This component cannot be installed by this version."
+msgstr ""
+
+#: includes/class-ltts-installer.php:143
+msgid "Another installation is running."
+msgstr ""
+
+#: includes/class-ltts-installer.php:146
+msgid "Cannot write to the download folder (wp-content/uploads)."
+msgstr ""
+
+#: includes/class-ltts-installer.php:211
+msgid "Could not read file details from Hugging Face: %s"
+msgstr ""
+
+#: includes/class-ltts-installer.php:226
+msgid "File not found on Hugging Face: %s"
+msgstr ""
+
+#: includes/class-ltts-installer.php:278
+msgid "The component is not in the catalog."
+msgstr ""
+
+#: includes/class-ltts-installer.php:338
+msgid "%s could not be downloaded from any source."
+msgstr ""
+
+#: includes/class-ltts-installer.php:403
+msgid "Could not download %1$s. Details: %2$s"
+msgstr ""
+
+#: includes/class-ltts-installer.php:445
+msgid "Could not download %1$s: %2$s"
+msgstr ""
+
+#: includes/class-ltts-installer.php:467
+msgid "Could not verify %1$s (size or SHA-256 does not match). Details: %2$s"
+msgstr ""
+
+#: includes/class-ltts-installer.php:530
+msgid "File missing: %s"
+msgstr ""
+
+#: includes/class-ltts-installer.php:535
+msgid "Could not verify: %s"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:321
+msgid "Preparing"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:322
+msgid "Reading with a synthetic voice"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:323
+msgid "Paused"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:324
+msgid "Preparing audio"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:325
+msgid "Couldn’t play"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:326
+msgid "End of the post"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:327
+msgid "Preparing the voice…"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:329
+msgid "Downloading the voice: {loaded} / {total} MB"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:331
+msgid "The first listen downloads about {size} MB. Audio is generated on your device."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:332
+msgid "Tap anywhere on the strip to listen from there."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:334
+msgid "{n} min"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:336
+msgid "{n} s"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:338
+msgid "{t} left"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:339
+msgid "Play"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:340
+msgid "Pause"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:342
+msgid "Stop"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:343
+msgid "Try again"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:345
+msgid "Reading speed: {v}"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:346
+msgid "Go to the current paragraph"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:347
+msgid "Position in the post"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:349
+msgid "Part {n} of {total}"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:351
+msgid "Voice: {credit}"
+msgstr ""
+
+#: includes/class-ltts-plugin.php:353
+msgid "The voice could not be downloaded. Check your connection and try again."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:354
+msgid "A downloaded voice file could not be verified. Try again."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:355
+msgid "The voice could not be opened in this browser. Reload the page and try again."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:356
+msgid "Your browser does not support on-device speech."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:357
+msgid "Something went wrong while generating audio. Try again."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:358
+msgid "No voice is available for this post’s language yet."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:359
+msgid "This post has no text to read."
+msgstr ""
+
+#: includes/class-ltts-plugin.php:360
+msgid "Not enough storage to keep the voice; it may download again next time."
+msgstr ""
+
+#: includes/class-ltts-updater.php:221
+msgid "Could not rename the downloaded plugin folder."
+msgstr ""
+
+#: includes/class-ltts-voices.php:130
+msgid "Could not load the Piper voice list: %s"
+msgstr ""
+
+#: includes/class-ltts-voices.php:220
+msgid "This voice is not in the Piper library."
+msgstr ""
+
+#: includes/class-ltts-voices.php:233
+msgid "Piper %1$s (%2$s, %3$s)"
+msgstr ""
+
+#: includes/class-ltts-voices.php:234
+msgid "See the model card"
+msgstr ""
+
+#: includes/class-ltts-voices.php:238
+msgid "Added from the Piper library. %d speakers; the first one is used."
+msgstr ""
+
+#: includes/class-ltts-voices.php:239
+msgid "Added from the Piper library."
+msgstr ""
+
+#: includes/class-ltts-voices.php:240
+msgid "Check the model card for the dataset licence before serving it."
+msgstr ""
+
+#: includes/class-ltts-voices.php:260
+msgid "Enter a name, a language code and two HTTPS addresses."
+msgstr ""
+
+#: includes/class-ltts-voices.php:263
+msgid "The SHA-256 must be 64 hexadecimal characters."
+msgstr ""
+
+#: includes/class-ltts-voices.php:274
+msgid "Not specified"
+msgstr ""
+
+#: includes/class-ltts-voices.php:278
+msgid "Added from addresses. The model file is checked against the SHA-256 you entered."
+msgstr ""
+
+#: includes/class-ltts-voices.php:279
+msgid "Added from addresses. No SHA-256 was given, so the file is trusted as first downloaded."
+msgstr ""
+
+#: includes/class-ltts-voices.php:289
+msgid "This voice is already in the list."
+msgstr ""
+
+#: includes/class-ltts-voices.php:305
+msgid "Only voices you added can be removed from the list."
+msgstr ""

@@ -1,0 +1,29 @@
+# Build output (attach ZIPs to GitHub releases instead of committing them)
+dist/
+*.zip
+
+# Downloaded voice models and runtimes never belong in the repository
+*.onnx
+*.wasm
+*.part
+*.chunk
+/local-tts/assets/vendor/
+
+# Tooling
+node_modules/
+vendor/
+.phpunit.result.cache
+__pycache__/
+*.pyc
+*.log
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Old plugin folder from 0.1-0.3 (replaced by local-tts/)
+asosyoloji-dinle/

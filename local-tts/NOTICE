@@ -1,0 +1,52 @@
+Local TTS
+Copyright (C) 2025-2026 Local TTS contributors
+Licensed under the GNU General Public License, version 3 or (at your option) any later version
+(see LICENSE).
+
+Local TTS is a tool for running open text-to-speech models in WordPress. It does not contain any
+voice model, speech data or speech runtime. Those are third-party works that the site owner chooses
+and downloads from their publishers on the plugin's Voices page; they are stored under
+wp-content/uploads/local-tts/ and sent to readers' browsers by the site. Each one keeps its own
+licence, and the site owner is responsible for respecting it. The plugin shows each component's
+licence before it is installed and writes a CREDITS.txt file (with the licence texts the publisher
+provides) next to the downloaded files.
+
+
+Third-party code included in the plugin
+---------------------------------------
+
+assets/js/engine/ema-lightning.js
+  Adapted from ozcancelik/ema-lightning-web (Apache License 2.0), tts.js and normalizer.js,
+  https://github.com/ozcancelik/ema-lightning-web (commit a9a688b19badc36486cdc2444ba957bc63ac860e),
+  which port frontend.py, chunker.py and engine.py of EMA Lightning (Apache License 2.0,
+  https://github.com/canberk7/ema-lightning).
+  Changes: model bytes and the runtime are passed in by the worker, one PCM buffer per segment,
+  cancellation checks, Turkish pre-normalisation (preTurkish).
+  The Apache License 2.0 text is in licenses/Apache-2.0.txt and the upstream NOTICE in
+  licenses/ema-lightning-web-NOTICE.txt. Apache-2.0 code may be combined into a GPL-3.0 work;
+  the Apache terms continue to apply to the adapted portions.
+
+assets/js/engine/piper.js
+  Written for Local TTS. It follows the inference steps of diffusionstudio/vits-web (MIT),
+  https://github.com/diffusionstudio/vits-web; no code is copied.
+
+
+Components the site owner may download (not distributed with the plugin)
+-------------------------------------------------------------------------
+
+- ONNX Runtime Web (MIT), Microsoft, https://github.com/microsoft/onnxruntime
+- EMA Lightning Turkish voice (Apache-2.0): ONNX conversion of canberkkkkkk/ema-lightning weights,
+  from ozcancelik/ema-lightning-web; normalizer.wasm is a WebAssembly build of Erdem Tuna's
+  normalizer-tr (Apache-2.0), https://github.com/erdemtuna/normalizer-tr. Third-party notices for
+  its Rust dependencies: licenses/normalizer-tr-THIRD_PARTY_NOTICES.md.
+- Piper phonemizer: piper_phonemize.wasm/.data from diffusionstudio/piper-wasm and the matching
+  JavaScript glue from diffusionstudio/vits-web (MIT). The WebAssembly build contains eSpeak NG,
+  GPL-3.0-or-later, https://github.com/espeak-ng/espeak-ng (source:
+  https://github.com/rhasspy/piper-phonemize and https://github.com/espeak-ng/espeak-ng).
+- Piper voices, https://huggingface.co/rhasspy/piper-voices. Each voice has its own dataset
+  licence, shown on its MODEL_CARD and in the admin screen. Several voices are fine-tuned from the
+  "lessac" voice, whose Blizzard 2013 dataset licence may restrict commercial use.
+- Any voice the site owner adds from the Piper library or from their own addresses.
+
+The model cards ask that generated audio be disclosed as synthetic; the player says
+"Reading with a synthetic voice" while it plays and can show each voice's credit line.

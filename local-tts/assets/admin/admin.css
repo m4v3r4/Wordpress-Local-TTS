@@ -1,0 +1,43 @@
+.ltts-admin .ltts-setup { padding: 4px 16px 12px; margin: 16px 0; }
+.ltts-admin .ltts-setup h2 { margin: 12px 0 4px; }
+.ltts-admin .ltts-tab { margin-top: 16px; }
+
+.ltts-admin .ltts-components td { vertical-align: top; }
+.ltts-admin .ltts-components .description { margin: 4px 0 0; max-width: 46em; }
+.ltts-admin .ltts-components .ltts-actions { white-space: nowrap; text-align: right; }
+.ltts-admin .ltts-components .ltts-actions .button-link { display: block; margin-top: 6px; margin-left: auto; }
+.ltts-admin .ltts-unavailable { opacity: .6; }
+.ltts-admin .ltts-version { color: #646970; font-size: 12px; }
+.ltts-admin .ltts-badge { display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 3px; background: #f0f0f1; font-size: 11px; }
+
+.ltts-admin .ltts-job { display: flex; align-items: center; gap: 8px; margin-top: 8px; }
+.ltts-admin .ltts-job[hidden] { display: none; }
+.ltts-admin .ltts-job progress { width: 220px; height: 10px; }
+.ltts-admin .ltts-job.ltts-error .ltts-job-text { color: #b32d2e; }
+
+.ltts-admin .ltts-ok { color: #008a20; font-weight: 600; }
+.ltts-admin .ltts-warn { color: #996800; font-weight: 600; }
+.ltts-admin .ltts-bad { color: #b32d2e; font-weight: 600; }
+
+.ltts-admin .ltts-terms { max-height: 180px; overflow: auto; margin-top: 8px; padding: 6px 10px; border: 1px solid #dcdcde; background: #fff; max-width: 32em; }
+.ltts-admin .ltts-terms label { display: block; padding: 2px 0; }
+.ltts-admin .ltts-terms .count { color: #646970; }
+
+.ltts-admin .ltts-serve-none { margin: 8px 0 0; }
+.ltts-admin .ltts-manual { margin-top: 24px; max-width: 60em; }
+.ltts-admin .ltts-manual summary { cursor: pointer; font-weight: 600; }
+.ltts-admin .ltts-file-list { margin-left: 1.5em; list-style: disc; }
+
+.ltts-admin .ltts-status-table, .ltts-admin .ltts-check-table { max-width: 60em; }
+.ltts-admin .ltts-status-table th, .ltts-admin .ltts-check-table th { width: 16em; }
+.ltts-admin .ltts-check-table[hidden] { display: none; }
+.ltts-admin .ltts-badge-live { margin: 4px 0 0; background: #d1f0d7; color: #00450c; }
+.ltts-admin .ltts-title { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ltts-admin .ltts-title .dashicons { font-size: 28px; width: 28px; height: 28px; }
+.ltts-admin .ltts-subtitle { font-size: 14px; font-weight: 400; color: #646970; }
+.ltts-admin .ltts-components td:nth-child(3) { white-space: nowrap; }
+.ltts-admin .ltts-credits-link { display: block; margin-top: 6px; font-size: 12px; }
+.ltts-admin .ltts-add-voice { margin-top: 28px; max-width: 60em; }
+.ltts-admin .ltts-library-select { display: block; width: 100%; max-width: 40em; margin: 8px 0; }
+.ltts-admin .ltts-library[hidden] { display: none; }
+.ltts-admin .ltts-add-url summary { cursor: pointer; font-weight: 600; margin: 16px 0 4px; }

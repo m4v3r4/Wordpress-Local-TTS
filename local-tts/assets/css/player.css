@@ -1,0 +1,325 @@
+/*
+ * Local TTS player.
+ * Colour and font come from the theme. Themes can set:
+ *   --ltts-accent     fill of the strip and the active ring (default: text colour)
+ *   --ltts-highlight  background of the paragraph being read
+ */
+.ltts-player {
+  --ltts-ink: currentColor;
+  --ltts-fill: var(--ltts-accent, currentColor);
+  --ltts-quiet: color-mix(in srgb, currentColor 62%, transparent);
+  --ltts-track: color-mix(in srgb, currentColor 16%, transparent);
+  --ltts-hover: color-mix(in srgb, currentColor 7%, transparent);
+
+  display: none; /* hidden without JavaScript */
+  box-sizing: border-box;
+  margin: 0 0 2em;
+  padding: 0;
+  line-height: 1.35;
+  font-size: 0.9375rem;
+}
+.ltts-player.ltts-ready { display: block; }
+.ltts-player *, .ltts-player *::before, .ltts-player *::after { box-sizing: inherit; }
+
+/* ------------------------------------------------------------ top row */
+
+.ltts-head {
+  display: flex;
+  align-items: center;
+  gap: 0.85em;
+}
+
+.ltts-player button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  box-shadow: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.ltts-player button:focus-visible,
+.ltts-map:focus-visible,
+.ltts-mini button:focus-visible {
+  outline: 2px solid var(--ltts-fill);
+  outline-offset: 3px;
+}
+.ltts-player button[hidden] { display: none; }
+.ltts-player button:disabled { cursor: default; }
+.ltts-player svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+
+.ltts-play {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 3em;
+  height: 3em;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5px currentColor !important;
+  transition: box-shadow 0.15s, background-color 0.15s;
+}
+.ltts-play svg { width: 46%; height: 46%; }
+.ltts-play:hover:not(:disabled) { background: var(--ltts-hover); }
+.ltts-player[data-state="playing"] .ltts-play,
+.ltts-player[data-state="waiting"] .ltts-play {
+  box-shadow: inset 0 0 0 2.5px var(--ltts-fill) !important;
+}
+.ltts-player[data-state="unavailable"] .ltts-play { opacity: 0.4; }
+
+.ltts-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.ltts-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  flex-wrap: wrap;
+}
+.ltts-label {
+  font-weight: 650;
+  font-size: 1.0625em;
+  letter-spacing: -0.005em;
+}
+.ltts-time {
+  color: var(--ltts-quiet);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9em;
+}
+.ltts-status {
+  margin-top: 0.15em;
+  color: var(--ltts-quiet);
+  font-size: 0.875em;
+  min-height: 1.35em;
+}
+.ltts-player[data-state="error"] .ltts-status,
+.ltts-player[data-state="unavailable"] .ltts-status { color: inherit; }
+
+.ltts-tools {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+.ltts-tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 0.6em !important;
+  border-radius: 999px;
+  color: var(--ltts-quiet) !important;
+  transition: background-color 0.15s, color 0.15s;
+}
+.ltts-tool:hover { background: var(--ltts-hover); color: inherit !important; }
+.ltts-tool svg { width: 18px; height: 18px; }
+.ltts-speed {
+  font-weight: 650;
+  font-size: 0.875em;
+  font-variant-numeric: tabular-nums;
+}
+.ltts-retry { color: inherit !important; box-shadow: inset 0 0 0 1px var(--ltts-track) !important; font-weight: 600; font-size: 0.875em; }
+
+/* ------------------------------------------------------------ post map */
+
+.ltts-map {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 22px;
+  margin-top: 0.7em;
+  border-radius: 4px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.ltts-map[hidden] { display: none; }
+
+.ltts-tick {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 3px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--ltts-track);
+  transition: height 0.18s ease, background-color 0.15s;
+}
+.ltts-tick:hover { background: color-mix(in srgb, currentColor 32%, transparent); }
+.ltts-tick-heading {
+  flex: 0 0 2px;
+  min-width: 2px;
+  height: 16px;
+  margin: 0 2px;
+  border-radius: 1px;
+  background: color-mix(in srgb, currentColor 45%, transparent);
+}
+.ltts-tick-current { height: 10px; }
+.ltts-tick-heading.ltts-tick-current { height: 20px; }
+
+.ltts-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--ltts-fill);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.ltts-player[data-state="idle"] .ltts-tick-current { height: 6px; }
+.ltts-player[data-state="loading"] .ltts-map { opacity: 0.35; cursor: progress; }
+
+/* ------------------------------------------------------------ model indirme */
+
+.ltts-load {
+  height: 3px;
+  margin-top: 0.5em;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--ltts-track);
+}
+.ltts-load[hidden] { display: none; }
+
+.ltts-credit {
+  margin-top: 0.45em;
+  font-size: 0.75em;
+  line-height: 1.4;
+  color: var(--ltts-quiet);
+}
+.ltts-credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.ltts-load-bar {
+  height: 100%;
+  background: var(--ltts-fill);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.25s linear;
+}
+
+/* ------------------------------------------------------------ paragraph being read */
+
+.ltts-reading {
+  background-color: var(--ltts-highlight, rgba(242, 201, 76, 0.26));
+  box-shadow: 0 0 0 0.3em var(--ltts-highlight, rgba(242, 201, 76, 0.26));
+  border-radius: 2px;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* ------------------------------------------------------------ floating bar */
+
+.ltts-mini {
+  position: fixed;
+  left: 50%;
+  bottom: max(12px, env(safe-area-inset-bottom));
+  z-index: 99990;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  width: min(36rem, calc(100% - 24px));
+  padding: 6px 6px 6px 6px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: var(--ltts-mini-bg, Canvas);
+  box-shadow: 0 0 0 1px color-mix(in srgb, currentColor 14%, transparent), 0 10px 28px rgba(0, 0, 0, 0.18);
+  font-size: 0.875rem;
+  line-height: 1.3;
+  transform: translate(-50%, calc(100% + 24px));
+  visibility: hidden;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s linear 0.25s;
+}
+.ltts-mini.ltts-mini-shown {
+  transform: translate(-50%, 0);
+  visibility: visible;
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0s;
+}
+.ltts-mini button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+  box-shadow: none;
+  cursor: pointer;
+}
+.ltts-mini svg { display: block; width: 100%; height: 100%; fill: currentColor; }
+.ltts-mini-play {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1.5px currentColor !important;
+}
+.ltts-mini-play svg { width: 20px; height: 20px; }
+.ltts-mini-text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2px 4px !important;
+  text-align: left;
+  border-radius: 8px;
+}
+.ltts-mini-text:hover { background: color-mix(in srgb, currentColor 7%, transparent) !important; }
+.ltts-mini-label { font-weight: 650; }
+.ltts-mini-snippet {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  opacity: 0.68;
+}
+.ltts-mini-stop {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+.ltts-mini-stop svg { width: 16px; height: 16px; }
+.ltts-mini-stop:hover { opacity: 1; background: color-mix(in srgb, currentColor 7%, transparent) !important; }
+.ltts-mini-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 2px;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+.ltts-mini-progress span {
+  display: block;
+  height: 100%;
+  background: var(--ltts-accent, currentColor);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+/* ------------------------------------------------------------ hareket */
+
+.ltts-spin { animation: ltts-spin 0.9s linear infinite; }
+@keyframes ltts-spin { to { transform: rotate(360deg); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .ltts-spin { animation-duration: 2.4s; }
+  .ltts-tick, .ltts-load-bar, .ltts-reading, .ltts-mini, .ltts-mini.ltts-mini-shown { transition: none; }
+}
+
+/* ------------------------------------------------------------ narrow screens */
+
+@media (max-width: 480px) {
+  .ltts-head { gap: 0.65em; }
+  .ltts-tool { min-width: 36px; padding: 0 0.45em !important; }
+  .ltts-status { font-size: 0.8125em; }
+}
